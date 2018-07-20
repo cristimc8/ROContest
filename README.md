@@ -1,0 +1,3 @@
+# ROContest
+ROContest este o platforma a carui scop este sa ajute toti elevii, profesorii dar si o parte din angajatorii din romania pentru a avea acces la toate informatiile utile legate de orice fel de concurs dar si realizarile participantilor in acestea. Site-ul nu este doar un site de socializare, ci imbina elemente specifice unuia cu adaugarea ca este pentru toti oamenii cu un interes comun din romania, acesta fiind realizarile in domenii de performanta si promovarea acestora.
+Pe scurt, este un site care are in scop publicarea tuturor concursurilor si sansa fiecarui elev sa iasa in evidenta cu realizarile acestuia.
