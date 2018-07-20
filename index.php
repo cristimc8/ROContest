@@ -227,6 +227,7 @@ if(isset($_POST['submit'])){
       $imageData = mysql_real_escape_string(file_get_contents($_FILES["image"]["name"]));
     }
     $descriere = $_REQUEST['detail'];
+    $descriere = strip_tags($descriere);
     $user = $_SESSION['username'];
     $concurs = '';
     $concurs = $_REQUEST['concursuri'];
@@ -247,6 +248,7 @@ if(isset($_POST['submit'])){
     $up = mysql_real_escape_string(file_get_contents($path));
     $user = $_SESSION['username'];
     $descriere = $_REQUEST['detail'];
+    $descriere = strip_tags($descriere);
     $concurs = '';
     $concurs = $_REQUEST['concursuri'];
     $sql = "INSERT INTO pictures values(NULL, 0, '$user', '$concurs', '$descriere', '$up')";
