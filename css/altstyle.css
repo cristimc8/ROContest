@@ -1,0 +1,79 @@
+
+body{
+  background-color: rgb(27,40,54);
+}
+
+.roundMini{
+  padding: 0;
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  border: 1px solid rgb(83, 180, 247);
+
+}
+.roundMini img {
+  display: block;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+#classic{
+  height: 25px;
+  width: 135px;
+  background-color: rgb(83, 180, 247);
+  border: none;
+  color: white;
+}
+
+#classic:hover{
+  color: red;
+}
+
+#link{
+  box-sizing: border-box;
+  border: 3px solid rgb(83, 180, 247);
+  transition: .2s ease;
+}
+
+#link:hover{
+  box-sizing: border-box;
+  border: 10px solid rgb(83, 180, 247);
+  transition: .2s ease;
+}
+
+p{
+    color: white;
+}
+
+.card{
+  left: 0;
+  right: 0;
+  margin: auto;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+.collapsible{
+  border: none;
+}
+.collapsible-header{
+  border: none;
+  background-color: rgb(17, 32, 56);
+  color: white;
+}
+.collapsible-body{
+  border: none;
+  background-color: rgb(17, 32, 56);
+}
+
+.input{
+  color: white;
+  outline: none;
+  background-color: rgb(17, 32, 56);
+  border-radius: 0;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid gray;
+  width: 100%;
+
+}
