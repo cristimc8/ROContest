@@ -85,7 +85,7 @@
   </ul>
 </div>
 
- <div style = "padding-top: 10px;"></div>
+
     <div style = 'width: 100%; background-color: rgb(10, 18, 28); height: 250px; border-radius: 5px; top: 50px; text-align: center;'>
       <div style = "width: 600px; height: 100%; background-color: rgb(10, 18, 28); position: relative; padding-bottom: 0;  border-radius: 5px; left: 0; right: 0; margin: auto;">
         <img src="<?php echo $copertaConcurs; ?> alt = ''" style="width: 100%; height: 100%; border-radius: 5px;">
@@ -141,8 +141,7 @@
       ?>
     </div>
 
-    <div class="freespace">
-    </div><div style = "padding-bottom: 220px;"></div>
+    <div style = "padding-bottom: 220px;"></div>
 
     <div class="row">
 
