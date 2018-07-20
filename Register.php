@@ -5,7 +5,7 @@
 <!DOCTYPE HTML>
 
 <head>
-  <title>ShareMe</title>
+  <title>ROContest</title>
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
   <link rel="icon" href="resurse/flag.png">
