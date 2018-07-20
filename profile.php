@@ -59,6 +59,7 @@ if(mysqli_num_rows($result) > 0){
         <li class="left hide-on-med-and-down"><a href="adauga.php"><i class="material-icons left">av_timer</i>Concursuri</a></li>
         <li class="left hide-on-med-and-down"><a href="people.php"><i class = "material-icons left">people</i>Utilizatori</a></li>
         <li class="left hide-on-med-and-down"><a href="administrare.php"><i class = "material-icons left">notifications_active</i>Administrare</a></li>
+        <li class="left hide-on-med-and-down"><a href="logout.php">Delogare</a></li>
       </ul>
       <ul id = "nav-mobile" class = "right">
         <a href="profile.php"><img class = "roundMini circle" src=<?php echo $picString; ?> alt=""></a>
@@ -76,6 +77,7 @@ if(mysqli_num_rows($result) > 0){
   <li><a href = "adauga.php" class="btn-floating yellow darken-1"><i class="material-icons">av_timer</i></a></li>
   <li><a href = "people.php" class="btn-floating green"><i class="material-icons">people</i></a></li>
   <li><a href = "administrare.php" class="btn-floating blue"><i class="material-icons">notifications_active</i></a></li>
+  <li><a href = "logout.php" class = "btn-floating blue">Delogare</a></li>
 </ul>
 </div>
 
