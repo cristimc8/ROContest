@@ -20,8 +20,9 @@
   <head>
     <meta charset="utf-8">
     <title>ROContest - <?php echo $profileName; ?></title>
-    <link rel="stylesheet" href="css/style.css?version=1">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/materialize.css">
+    <link rel="stylesheet" href="css/altstyle.css">
     <link rel="icon" href="resurse/flag.png">
   </head>
   <?php
@@ -54,31 +55,43 @@
     $copertaConcurs .= $backupCoperta;
   ?>
   <body>
-    <div id = "header">
-    	<div style = "height: 60px;">
-      	<ul style = "height: 60px;">
-          <div style = "padding-top: 20px;"></div>
-          <li><a href="index.php"><img src="resurse/Home.png" style = "width: 25px; height: 25px; vertical-align: middle;">&nbsp;&nbsp;Acasa</a></li>
-          <li><a href="Adauga.php"><img src="resurse/Timer.png" style = "width: 25px; height: 25px; vertical-align: middle;">&nbsp;&nbsp;Concursuri</a></li>
-          <li><a href="people.php"><img src="resurse/People.png" style = "width: 25px; height: 25px; vertical-align: middle;">&nbsp;&nbsp;Utilizatori</a></li>
-          <li><a href="administrare.php"><img src="resurse/Alarm1.png" style = "width: 25px; height: 25px; vertical-align: middle;">&nbsp;&nbsp;Administrare</a></li>
-          <a href = "index.php" style = "text-align: center;" id = "logo"><img src = "resurse/Logo.png" alt = "Home" style = "max-width: 50px; max-height: 50px; vertical-align: middle;"></a>
-          <div class="roundMini">
-            <?php echo "<a href = profile.php><img src = $picString></a>"; ?>
-          </div>
-           <div style = "padding-bottom: 10px;">
-           </div>
-         </ul>
-    	</div>
-  	</div>
+    <div class="navbar-fixed">
+      <!--<nav class = "light-blue accent-4">-->
+      <nav style = "background-color: rgb(17, 32, 56);">
+      <div class="nav-wrapper">
+        <a href="index.php" id = "logo" class="brand-logo center"><img src="resurse/Logo.png" style = "max-width: 55px; max-height: 55px; vertical-align: middle;" alt=""></a>
+        <ul id="nav-mobile" class="left">
+          <li class="left hide-on-med-and-down"><a href="index.php"><i class="material-icons left">home</i>Acasa</a></li>
+          <li class="left hide-on-med-and-down"><a href="adauga.php"><i class="material-icons left">av_timer</i>Concursuri</a></li>
+          <li class="left hide-on-med-and-down"><a href="people.php"><i class = "material-icons left">people</i>Utilizatori</a></li>
+          <li class="left hide-on-med-and-down"><a href="administrare.php"><i class = "material-icons left">notifications_active</i>Administrare</a></li>
+        </ul>
+        <ul id = "nav-mobile" class = "right">
+          <a href="profile.php"><img class = "roundMini circle" src=<?php echo $picString; ?> alt=""></a>
+        </ul>
+      </div>
+    </nav>
+  </div>
 
-    <div class="freespace"></div> <div style = "padding-top: 10px;"></div>
+  <div class="fixed-action-btn show-on-med-and-down hide-on-large-only">
+  <a class="btn-floating btn-large red">
+    <i class="large material-icons">menu</i>
+  </a>
+  <ul>
+    <li><a href = "index.php" class="btn-floating red"><i class="material-icons">home</i></a></li>
+    <li><a href = "adauga.php" class="btn-floating yellow darken-1"><i class="material-icons">av_timer</i></a></li>
+    <li><a href = "people.php" class="btn-floating green"><i class="material-icons">people</i></a></li>
+    <li><a href = "administrare.php" class="btn-floating blue"><i class="material-icons">notifications_active</i></a></li>
+  </ul>
+</div>
+
+ <div style = "padding-top: 10px;"></div>
     <div style = 'width: 100%; background-color: rgb(10, 18, 28); height: 250px; border-radius: 5px; top: 50px; text-align: center;'>
       <div style = "width: 600px; height: 100%; background-color: rgb(10, 18, 28); position: relative; padding-bottom: 0;  border-radius: 5px; left: 0; right: 0; margin: auto;">
         <img src="<?php echo $copertaConcurs; ?> alt = ''" style="width: 100%; height: 100%; border-radius: 5px;">
       </div>
-      <div class="roundMini" style = 'width: 200px; height: 200px; position: relative; top: -90px; left: 0; right: 0; margin: auto; border: 3px solid rgb(83, 180, 247); margin-top: 0; padding-top: 0;'>
-        <?php echo "<img src = $pozaconcurs>" ?>
+      <div class="roundMini circle" style = 'width: 200px; height: 200px; position: relative; top: -90px; left: 0; right: 0; margin: auto; border: 3px solid rgb(83, 180, 247); margin-top: 0; padding-top: 0;'>
+        <?php echo "<img src = $pozaconcurs class = 'roundMini circle'>" ?>
       </div>
       <p style = "position: relative; top: -65px; left: 0; right: 0; margin: auto; font-size: 18px;"><?php echo $profileName; ?></p>
     </div>
@@ -129,10 +142,11 @@
     </div>
 
     <div class="freespace">
-    </div><div style = "padding-bottom: 150px;"></div>
+    </div><div style = "padding-bottom: 220px;"></div>
 
+    <div class="row">
 
-    <div class="newsfeed">
+    <div class="card-panel col s12 m12 l6 offset-l3" style = "background-color: rgb(17, 32, 56); text-align: center;">
       <?php
       $usr = $profileName;
       $sql = "select id from pictures";
@@ -170,9 +184,10 @@
           }
           $picString .= $i;
           if(isset($concurs) && $concurs != 'default')
-            echo "<div class = 'post'><form action = 'GoToProfile.php' method = 'get'><input type = 'submit' value = $op name = 'profileName' style = 'border: none; background-color: transparent; color: rgb(83,180,247); font-size: 20px;'><img src = '$profilePic' class = 'roundMini2'><p> in $concurs</p></input></form><p>$description</p><img src =$picString alt = '' class = 'picturePost'></div><div style = 'padding-top: 15px;'></div>";
-          else
-            echo "<div class = 'post'><form action = 'GoToProfile.php' method = 'get'><input type = 'submit' value = $op name = 'profileName' style = 'border: none; background-color: transparent; color: rgb(83,180,247); font-size: 20px;'><img src = '$profilePic' class = 'roundMini2'></input></form><p>$description</p><img src =$picString alt = '' class = 'picturePost'></div><div style = 'padding-top: 15px;'></div>";
+            echo "<div class = 'post' style = 'text-align: center;'><form action = 'GoToProfile.php' method = 'get'><input type = 'submit' value = $op name = 'profileName' style = 'border: none; background-color: transparent; color: white; font-size: 20px;'><img src = '$profilePic' class = 'roundMini circle'></input></form><div class = 'card' style = 'max-width: 80%;'><div class = card-image><img src = '$picString' alt = ' ' class = 'z-depth-2'><span class = 'card-title'>in $concurs</span></div><div class = 'card-content' style = 'text-align: left;'><p style = 'color: black;'>$description</p></div></div></div>";
+          else{
+            echo "<div class = 'post'><form action = 'GoToProfile.php' method = 'get'><input type = 'submit' value = $op name = 'profileName' style = 'border: none; background-color: transparent; color: white; font-size: 20px;'><img src = '$profilePic' class = 'roundMini circle'></input></form><div class = 'card' style = 'max-width: 80%;'><div class = card-image><img src = '$picString' alt = ' ' class = 'z-depth-2'></div><div class = 'card-content' style = 'text-align: left;'><p style = 'color: black;'>$description</p></div></div></div>";
+          }
           $picString = "ViewImage.php?id=";
           unset($op);
           unset($concurs);
@@ -180,5 +195,8 @@
       }
       ?>
     </div>
+  </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/materialize.js"></script>
   </body>
 </html>
